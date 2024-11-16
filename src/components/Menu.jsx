@@ -7,7 +7,7 @@ function Menu() {
     function hamburger() {
         if (showMenu === true) {
             return (
-                <nav className='flex flex-col bg-black text-white p-4 mx-auto gap-8 justify-center items-center'>
+                <nav className=' transition-all ease-in-out mt-12 z-10 fixed top-0 w-full flex flex-col bg-black text-white p-4 mx-auto gap-8 justify-center items-center'>
                     <a href='/'>Home</a>
                     <a href='/about'>About</a>
                     <a href='/contact'>Contact</a>
@@ -30,9 +30,9 @@ function Menu() {
 
     return (
         <div>
-            <nav className='flex bg-black text-white p-4'>
+            <nav className='fixed top-0 w-full flex bg-black text-white p-4'>
                 {horizontal()}
-                <a className='ml-auto my-auto'>
+                <a className='ml-auto my-auto cursor-pointer'>
                     <IoMenu
                         onClick={() => {
                             setShowMenu(!showMenu);
